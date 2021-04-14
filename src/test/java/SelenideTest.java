@@ -54,7 +54,6 @@ public class SelenideTest {
     @Test
     void shouldEmptyCity() {
         open("http://localhost:9999/");
-        $("[placeholder='Город']").setValue("Москва");
         $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         $("[placeholder='Дата встречи']").setValue(date);
         $("[name='name']").setValue("Тестов Тестович");
