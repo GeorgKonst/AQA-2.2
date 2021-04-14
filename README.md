@@ -1,1 +1,2 @@
-![example workflow](https://github.com/GeorgKonst/AQA-2.2)
+https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
+
