@@ -1,1 +1,1 @@
-![example workflow](https://img.shields.io/github/workflow/status/GeorgKonst/AQA-2.2/gradle.yml)
+![example workflow](https://github.com/GeorgKonst/AQA-2.2/actions/workflows/gradle.yml/badge.svg)
