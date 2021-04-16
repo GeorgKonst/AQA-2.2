@@ -16,7 +16,7 @@ import static java.time.Duration.ofMillis;
 
 public class SelenideTest {
     int random = (int) ( Math.random()* (30 - 3 + 1) + 3 );
-    String date = LocalDate.now().plusDays(random).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    String date = LocalDate.now().plusDays(random).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
     @Test
     void shouldValidForm() {
@@ -29,6 +29,7 @@ public class SelenideTest {
         $(".checkbox").click();
         $(".button").click();
         $(byText("Успешно!")).shouldBe(Condition.visible, Duration.ofSeconds(15));
+        $(withText(date)).shouldBe(Condition.text(date));
     }
 
     @Test
@@ -98,6 +99,6 @@ public class SelenideTest {
         $("[name='name']").setValue("Тестов Тестович");
         $("[name='phone']").setValue("+79109999999");
         $(".button").click();
-        $(withText("Я соглашаюсь")).shouldBe(Condition.cssValue("color", "rgba(255, 92, 92, 1)"));
+        $(".input_invalid").shouldBe(Condition.visible);
     }
 }
